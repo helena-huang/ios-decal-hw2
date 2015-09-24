@@ -159,6 +159,9 @@
 		3AAA638E1BA9263900E3822E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					bear,
+				);
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "iOS Decal";
 				TargetAttributes = {
