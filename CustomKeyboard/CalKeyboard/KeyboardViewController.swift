@@ -63,29 +63,29 @@ class KeyboardViewController: UIInputViewController {
         view.backgroundColor = keyboardView.backgroundColor
         nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode:", forControlEvents: .TouchUpInside) // advanceToNextInputMode is already defined in template
     }
-
+    
     @IBAction func pressShift(sender: UIButton) {
         shiftIsPressed = !shiftIsPressed
         if shiftIsPressed {
             shiftButton.backgroundColor = UIColor.grayColor()
         } else {
-            shiftButton.backgroundColor = UIColor.whiteColor()
+            shiftButton.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.4)
         }
     }
     
     @IBAction func hitSpace(sender: UIButton) {
         (textDocumentProxy as UIKeyInput).insertText(" ")
-        sender.backgroundColor = UIColor.whiteColor()
+        sender.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
     }
     
     @IBAction func hitReturn(sender: UIButton) {
         (textDocumentProxy as UIKeyInput).insertText("\n")
-        sender.backgroundColor = UIColor.whiteColor()
+        sender.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.4)
     }
-    
+
     @IBAction func hitBackspace(sender: UIButton) {
         (textDocumentProxy as UIKeyInput).deleteBackward()
-        sender.backgroundColor = UIColor.whiteColor()
+        sender.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.4)
     }
     
     @IBAction func typeAnimalNoise(sender: UIButton) {
@@ -95,7 +95,7 @@ class KeyboardViewController: UIInputViewController {
         } else {
             (textDocumentProxy as UIKeyInput).insertText(arrayOfNoiseStrings[sender.tag])
         }
-        sender.backgroundColor = UIColor.whiteColor()
+        sender.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
     }
     
     @IBAction func changeColorWhenPressed(sender: UIButton) {
